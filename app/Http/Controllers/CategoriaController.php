@@ -12,9 +12,13 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function create()
     {
-        return view('admin.main');
+        return view('admin.categorias.create');
+
+    {
+        $categorias = Categoria::all();
+        return view('admin.categorias.index', compact('categorias'));
     }
 
     /**
@@ -23,9 +27,9 @@ class CategoriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+
         //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -81,5 +85,7 @@ class CategoriaController extends Controller
     public function destroy(Categoria $categoria)
     {
         //
+        $categoria->delete()
+            return redirect()->route('categorias.index');
     }
 }
