@@ -3,11 +3,12 @@
 @section('conteudo')
     <div class="container">
         <div class="row">
-            <form action="{{route('categorias.store')}}" method="post">
+            <form action="{{route('categorias.update', $categoria)}}" method="post">
+                @method('PUT')
                 @csrf
                 <div class="form-group">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control" required>
+                    <input type="text" name="nome" id="nome" class="form-control" required value="{{$categoria->nome}}">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-success" type="submit">Gravar</button>
