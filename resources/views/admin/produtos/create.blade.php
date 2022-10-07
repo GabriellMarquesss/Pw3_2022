@@ -3,28 +3,40 @@
 @section('conteudo')
     <div class="container">
         <div class="row">
-            <form action="{{route('produtos.store')}}" method="post">
+            <form action="{{route('produtos.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <div class="col col=6">
-                        <label for="estoque">Estoque:</label>
-                        <input type="number" name="valor" id="valor" class="form-control" required>
-                    </div>
                     <div class="row">
-
-
+                        <div class="col col-6">
+                            <label for="estoque">Estoque:</label>
+                            <input type="number" name="estoque" id="estoque" class="form-control" required>
+                        </div>
+                        <div class="col col-6">
+                            <label for="valor">Valor:</label>
+                            <input type="number" name="valor" id="valor" class="form-control" required>
+                        </div>
                     </div>
-                    <label for="categoria">Categoria</label>
-                    <input type="text" id="nome" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="subcategoria">Subcategoria:</label>
+                    <select name="subcategoria_id" id="subcategoria" class="form-control" required>
                         <option value="">Selecione uma categoria</option>
-                        @foreach($subcategoria as $categoria)
-                            <option value="{{$categoria->id}}">{{$categoria->nome}}</option>
+                        @foreach($subcategorias as $subcategoria)
+                            <option value="{{$subcategoria->id}}">{{$subcategoria->nome}}</option>
                         @endforeach
                     </select>
+                </div>
+                <div class="form-group">
+                    <label for="imagem">Imagem:</label>
+                    <input type="file" name="" id="imagem" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descricão:</label>
+                    <textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-success" type="submit">Gravar</button>
@@ -34,5 +46,3 @@
         </div>
     </div>
 @endsection
-
-

@@ -15,7 +15,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        $produtos = Produto::all();
+        $produtos = Produto::paginate(10);
         return view('admin.produtos.index', compact('produtos'));
     }
 
@@ -26,8 +26,8 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        $subcategorias
-        return view('admin.produtos.create');
+        $subcategorias = Subcategoria::all();
+        return view('admin.produtos.create', compact('subcategorias'));
     }
 
     /**
@@ -50,7 +50,7 @@ class ProdutoController extends Controller
      */
     public function show(Produto $produto)
     {
-        //
+        return view('admin.produtos.show', compact('produto'));
     }
 
     /**
@@ -62,7 +62,7 @@ class ProdutoController extends Controller
     public function edit(Produto $produto)
     {
         $subcategorias = Subcategoria::all();
-        return view('admin.produtos.edit', compact('subcategorias'));
+        return view('admin.produtos.edit', compact('subcategorias', 'produto'));
     }
 
     /**
@@ -74,7 +74,9 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, Produto $produto)
     {
-        //
+        $params = $request->all();
+        $produto->update($params);
+        return redirect()->route('produtos.index');
     }
 
     /**
