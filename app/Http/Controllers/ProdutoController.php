@@ -33,19 +33,38 @@ class ProdutoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        Produto::create($request->all());
-        return redirect()->route('produtos.index');
+
+        $nameFile = null;
+        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+            $name = uniqid(date('HisYmd'));
+            $extension = $request->file('imagem')->extension();
+            $nameFile = $name . "." . $extension;
+            $upload = $request->file('imagem')->storeAs('public/produtos/', $nameFile);
+            if (!$upload) {
+                return redirect()
+                    ->back
+                    ->with('error', 'Falha ap fazer upload')
+                    ->withInput();
+            } else {
+                $produto = Produto::create($request->all());
+                $produto->imagem = $nameFile;
+                $produto->save();
+                return redirect()->route('produtos.index');
+            }
+        }
+
     }
+
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param \App\Models\Produto $produto
      * @return \Illuminate\Http\Response
      */
     public function show(Produto $produto)
@@ -56,7 +75,7 @@ class ProdutoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param \App\Models\Produto $produto
      * @return \Illuminate\Http\Response
      */
     public function edit(Produto $produto)
@@ -68,8 +87,8 @@ class ProdutoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Produto  $produto
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Produto $produto
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Produto $produto)
@@ -82,7 +101,7 @@ class ProdutoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param \App\Models\Produto $produto
      * @return \Illuminate\Http\Response
      */
     public function destroy(Produto $produto)
