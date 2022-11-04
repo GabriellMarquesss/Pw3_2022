@@ -30,8 +30,7 @@
                             </td>
                         </tr>
                     @endforeach
-                    </tbody>
-                </table>
-            </div>
+                </body>
+            </html>
         </div>
 @endsection

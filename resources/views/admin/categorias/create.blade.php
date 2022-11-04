@@ -9,6 +9,8 @@
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" class="form-control" required>
                 </div>
+
+                <div class=""></div>
                 <div class="form-group">
                     <button class="btn btn-success" type="submit">Gravar</button>
                     <a class="btn btn-danger" href="{{route('categorias.index')}}">Cancelar</a>

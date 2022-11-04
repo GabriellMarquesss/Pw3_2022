@@ -16,11 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('categorias', \App\Http\Controllers\CategoriaController::class)->middleware(['auth', 'verified']);
-Route::resource('subcategorias', \App\Http\Controllers\SubcategoriaController::class)->middleware(['auth', 'verified']);
-Route::resource('produtos', \App\Http\Controllers\ProdutoController::class)->middleware(['auth', 'verified']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::resource('categorias', \App\Http\Controllers\CategoriaController::class)->middleware(['auth', 'verified']);
+Route::resource('subcategorias', \App\Http\Controllers\SubcategoriaController::class)->middleware(['auth', 'verified']);
+Route::resource('produtos', \App\Http\Controllers\ProdutoController::class)->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
