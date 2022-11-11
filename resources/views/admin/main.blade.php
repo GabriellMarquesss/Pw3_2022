@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,18 +7,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
     <title>Ultimo projeto web do curso</title>
-
-
-
-
-
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
-
     <meta name="theme-color" content="#712cf9">
-
-
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -28,13 +17,11 @@
             -moz-user-select: none;
             user-select: none;
         }
-
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
         }
-
         .b-example-divider {
             height: 3rem;
             background-color: rgba(0, 0, 0, .1);
@@ -42,25 +29,21 @@
             border-width: 1px 0;
             box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
         }
-
         .b-example-vr {
             flex-shrink: 0;
             width: 1.5rem;
             height: 100vh;
         }
-
         .bi {
             vertical-align: -.125em;
             fill: currentColor;
         }
-
         .nav-scroller {
             position: relative;
             z-index: 2;
             height: 2.75rem;
             overflow-y: hidden;
         }
-
         .nav-scroller .nav {
             display: flex;
             flex-wrap: nowrap;
@@ -72,14 +55,11 @@
             -webkit-overflow-scrolling: touch;
         }
     </style>
-
-
     <!-- Custom styles for this template -->
     <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 <body>
-
 <header class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -88,25 +68,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
-                        <form action="{{route('logout')}}" method="post">
-                            @csrf
                         <li>
-                            <a class="dropdown-item" href="#" onclick="event.preventDefault();this.closest('form').submit();">Sair</a></li>
-                        </form>
+                            <form action="{{route('logout')}}" method="post">
+                                @csrf
+                                <a class="dropdown-item" href="#"
+                                   onclick="event.preventDefault();this.closest('form').submit();">
+                                    Sair
+                                </a>
+                            </form>
+                        </li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-
 </header>
-
 <div class="container-fluid">
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -132,9 +113,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span data-feather="users" class="align-text-bottom"></span>
-                            Customers
-                        </a>
+                            <a class="nav-link" href="{{route('produtos.index')}}">
+                                <span data-feather="users" class="align-text-bottom"></span>
+                                Customers
+                                Produtos
+                            </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -149,7 +132,6 @@
                         </a>
                     </li>
                 </ul>
-
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
                     <span>Saved reports</span>
                     <a class="link-secondary" href="#" aria-label="Add a new report">
@@ -184,17 +166,12 @@
                 </ul>
             </div>
         </nav>
-
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             @yield('conteudo')
         </main>
     </div>
 </div>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
 <script src="{{asset('js/dashboard.js')}}"></script>

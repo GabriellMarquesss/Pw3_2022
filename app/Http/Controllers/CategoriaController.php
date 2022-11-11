@@ -23,10 +23,8 @@ class CategoriaController extends Controller
     public function create()
     {
         //
-
         return view('admin.categorias.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -41,7 +39,6 @@ class CategoriaController extends Controller
         Categoria::create($request->all());
         return redirect()->route('categorias.index');
     }
-
     /**
      * Display the specified resource.
      *
@@ -74,13 +71,13 @@ class CategoriaController extends Controller
         $request->validate([
             'nome' => ['required', 'string', 'max:30', 'unique:categorias']
         ]);
-        $params = $request->all();;
+        $params = $request->all();
         $categoria->update($params);
         return redirect()->route('categorias.index');
     }
     /**
      * Remove the specified resource from storage.
-     * @param \Illuminate\Http\Request $request
+     *
      * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
