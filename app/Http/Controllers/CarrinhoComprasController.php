@@ -11,6 +11,7 @@ class CarrinhoComprasController extends Controller
 public function limparCarrinho(){
      \Cart::clear();
      return redirect()->route('vitrine.carrinho');
+
 }
 
 }
