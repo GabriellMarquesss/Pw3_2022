@@ -5,18 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>eElectronics - HTML eCommerce Template</title>
+
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('./css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{asset('./css/style-vitrine.css')}}">
     <link rel="stylesheet" href="{{asset('./css/responsive.css')}}">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,6 +30,7 @@
     <![endif]-->
 </head>
 <body>
+
 <div class="header-area">
     <div class="container">
         <div class="row">
@@ -39,6 +45,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
@@ -50,6 +57,7 @@
                                 <li><a href="#">GBP</a></li>
                             </ul>
                         </li>
+
                         <li class="dropdown dropdown-small">
                             <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -64,6 +72,7 @@
         </div>
     </div>
 </div> <!-- End header area -->
+
 <div class="site-branding-area">
     <div class="container">
         <div class="row">
@@ -72,6 +81,7 @@
                     <h1><a href="index.html">e<span>Electronics</span></a></h1>
                 </div>
             </div>
+
             <div class="col-sm-6">
                 <div class="shopping-item">
                     <a href="cart.html">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
@@ -80,6 +90,7 @@
         </div>
     </div>
 </div> <!-- End site branding area -->
+
 <div class="mainmenu-area">
     <div class="container">
         <div class="row">
@@ -100,6 +111,7 @@
                                 @foreach($categorias as $categoria)
                                     <li><a href="{{route('vitrine.categoria', $categoria->id)}}">{{$categoria->nome}}</a></li>
                                 @endforeach
+
                             </ul>
                         </li>
                         <li class="drop2"><a href="single-product.html">Subcategorias</a>
@@ -116,17 +128,20 @@
         </div>
     </div>
 </div> <!-- End mainmenu area -->
+
 <div class="product-big-title-area">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="product-bit-title text-center">
-                    <h2>Shop</h2>
+                    <h2>Carrinho de Compras</h2>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 <div class="single-product-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
@@ -135,6 +150,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="footer-top-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
@@ -152,6 +169,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-6">
                 <div class="footer-menu">
                     <h2 class="footer-wid-title">User Navigation </h2>
@@ -164,6 +182,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-6">
                 <div class="footer-menu">
                     <h2 class="footer-wid-title">Categories</h2>
@@ -176,6 +195,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-6">
                 <div class="footer-newsletter">
                     <h2 class="footer-wid-title">Newsletter</h2>
@@ -197,6 +217,7 @@
                     <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="footer-card-icon">
                     <i class="fa fa-cc-discover"></i>
@@ -208,15 +229,20 @@
         </div>
     </div>
 </div>
+
 <!-- Latest jQuery form server -->
 <script src="https://code.jquery.com/jquery.min.js"></script>
+
 <!-- Bootstrap JS form CDN -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 <!-- jQuery sticky menu -->
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('js/jquery.sticky.js')}}"></script>
+
 <!-- jQuery easing -->
 <script src="{{asset('js/jquery.easing.1.3.min.js')}}"></script>
+
 <!-- Main Script -->
 <script src="{{asset('js/main.js')}}"></script>
 </body>

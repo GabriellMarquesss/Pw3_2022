@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="product-option-shop">
-                        <a class="add_to_cart_button"  rel="nofollow" href="{{route('vitrine.detalhes', $produto->id)}}">Detalhes</a>
+                        <a class="add_to_cart_button" rel="nofollow" href="{{route('vitrine.detalhes', $produto->id)}}">Detalhes</a>
                     </div>
                 </div>
             </div>

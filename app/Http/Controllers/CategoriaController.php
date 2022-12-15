@@ -1,7 +1,10 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use App\Models\Categoria;
 use Illuminate\Http\Request;
+
 class CategoriaController extends Controller
 {
     /**
@@ -15,6 +18,7 @@ class CategoriaController extends Controller
         $categorias = Categoria::all();
         return view('admin.categorias.index', compact('categorias'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,6 +29,7 @@ class CategoriaController extends Controller
         //
         return view('admin.categorias.create');
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -39,6 +44,7 @@ class CategoriaController extends Controller
         Categoria::create($request->all());
         return redirect()->route('categorias.index');
     }
+
     /**
      * Display the specified resource.
      *
@@ -49,6 +55,7 @@ class CategoriaController extends Controller
     {
         return abort(404, 'Pagina nao encontrada');
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -59,6 +66,7 @@ class CategoriaController extends Controller
     {
         return view('admin.categorias.edit', compact('categoria'));
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -75,6 +83,7 @@ class CategoriaController extends Controller
         $categoria->update($params);
         return redirect()->route('categorias.index');
     }
+
     /**
      * Remove the specified resource from storage.
      *

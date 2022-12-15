@@ -28,12 +28,12 @@
     <form action="{{route('vitrine.addcarrinho')}}" method="post" class="cart">
         @csrf
         <div class="quantity">
-            <input type="number" size="" id="" class="input-text qty text" value="1" min="1" step="1" name="quantity">
+            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
         </div>
         <input type="hidden" name="id" value="{{$produto->id}}">
         <input type="hidden" name="name" value="{{$produto->nome}}">
         <input type="hidden" name="price" value="{{$produto->valor}}">
         <input type="hidden" name="image" value="{{$produto->imagem}}">
-        <button type="submit" class="add_to_cart_button">Adicionar</button>
+        <button class="add_to_cart_button" type="submit">Adicionar</button>
     </form>
 @endsection

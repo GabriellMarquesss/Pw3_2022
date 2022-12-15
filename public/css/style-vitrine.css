@@ -28,6 +28,9 @@ h6 {
     margin: 0 0 15px;
 }
 body { font-family: 'Titillium Web', sans-serif; }
+
+
+
 .header-area {
     background: none repeat scroll 0 0 #f4f4f4;
 }
@@ -70,11 +73,15 @@ body { font-family: 'Titillium Web', sans-serif; }
     min-width: 100px;
     text-align: center;
 }
+
 .mainmenu-area {background: none repeat scroll 0 0 #1abc9c;
     font-family: "Roboto Condensed",sans-serif;
     text-transform: uppercase;
     width: 100%;
     z-index: 999;}
+
+
+
 .logo h1 {
     font-size: 40px;
     margin: 40px 0;font-weight: 400;
@@ -118,6 +125,8 @@ body { font-family: 'Titillium Web', sans-serif; }
 .shopping-item i.fa {
     margin-left: 15px;
 }
+
+
 .shopping-item:hover {
     background: none repeat scroll 0 0 #1abc9c;
     border-color: #1abc9c;
@@ -131,14 +140,18 @@ body { font-family: 'Titillium Web', sans-serif; }
 .shopping-item:hover .product-count {
     background: none repeat scroll 0 0 #000;
 }
+
+
 .mainmenu-area ul.navbar-nav li a {
     color: #fff;
     font-size: 16px;
     font-weight: 700;
     padding: 20px;
 }
+
 .mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #222}
 .mainmenu-area .nav > li > a:focus {color: #000}
+
 .slider-area {clear: both}
 .slider-area, .promo-area, .brands-area, .maincontent-area, .footer-top-area, .product-widget-area, .product-breadcroumb-area, .single-product-area {position: relative;overflow: hidden}
 .zigzag-bottom {}
@@ -148,7 +161,9 @@ body { font-family: 'Titillium Web', sans-serif; }
 .slide-text-wrapper {
     display: table;width: 100%;
 }
+
 .slide-text {display: table-cell;vertical-align: middle}
+
 .zigzag-bottom {
     background: none repeat scroll 0 0 #1abc9c;
     bottom: -80px;
@@ -159,6 +174,7 @@ body { font-family: 'Titillium Web', sans-serif; }
     width: 108%;
     z-index: 9;
 }
+
 .slide-bg {
     height: 100%;
     left: 0;
@@ -183,6 +199,7 @@ body { font-family: 'Titillium Web', sans-serif; }
 .slide-text h2 {
     font-size: 45px;font-weight: 200
 }
+
 .slide-content {position: relative;z-index: 9;padding: 30px}
 .slide-content:before {
     background: none repeat scroll 0 0 #000;
@@ -195,6 +212,8 @@ body { font-family: 'Titillium Web', sans-serif; }
     width: 100%;
     z-index: -1;
 }
+
+
 .readmore {
     background: none repeat scroll 0 0 #1abc9c;
     color: #fff;
@@ -205,17 +224,23 @@ body { font-family: 'Titillium Web', sans-serif; }
     padding: 10px 20px;
     text-transform: uppercase;
 }
+
+
 .readmore:hover {background: #222;text-decoration: none;color: #fff;border: 1px solid #fff}
+
+
 .promo-area {
     background: none repeat scroll 0 0 #1abc9c;
     color: #fff;
     padding: 77px 0 200px;
 }
+
 .brands-area {
     background: none repeat scroll 0 0 #1abc9c;
     color: #fff;
     padding: 0px 0 200px;
 }
+
 .promo-area .zigzag-bottom, .brands-area .zigzag-bottom{background: #fff}
 .single-promo {
     border: 1px solid #17a78b;
@@ -227,7 +252,9 @@ body { font-family: 'Titillium Web', sans-serif; }
 .single-promo i {
     font-size: 50px;
 }
+
 .single-promo:hover {color: #fff;background: #222;border-color: #222}
+
 .section-title {
     font-family: "Raleway",sans-serif;
     font-size: 50px;
@@ -235,6 +262,8 @@ body { font-family: 'Titillium Web', sans-serif; }
     margin-bottom: 50px;
     text-align: center;
 }
+
+
 .product-f-image {
     position: relative;
 }
@@ -291,6 +320,8 @@ body { font-family: 'Titillium Web', sans-serif; }
     margin-bottom: 10px;
     margin-top: 15px;
 }
+
+
 .single-product h2 a {
     color: #222;
 }
@@ -298,6 +329,7 @@ body { font-family: 'Titillium Web', sans-serif; }
     color: #1abc9c;
     font-weight: 700;
 }
+
 .single-product {
     overflow: hidden;
 }
@@ -305,6 +337,8 @@ body { font-family: 'Titillium Web', sans-serif; }
 .single-product:hover .product-hover a.add-to-cart-link {top: 32%;}
 .single-product:hover .product-hover a.view-details-link {bottom: 32%;}
 .single-product:hover .product-hover:after{left: 0}
+
+
 .product-carousel {
     padding-top: 40px;
 }
@@ -313,6 +347,7 @@ body { font-family: 'Titillium Web', sans-serif; }
     right: 0;
     top: 0;
 }
+
 .latest-product .owl-nav div, .related-products-wrapper .owl-nav div {
     border: 1px solid #1abc9c;
     color: #1abc9c;
@@ -334,13 +369,17 @@ body { font-family: 'Titillium Web', sans-serif; }
     margin-left: 15px;
     padding: 1px 10px;
 }
+
 .maincontent-area {padding-bottom: 170px}
+
 .product-wid-title {
     font-family: raleway;
     font-size: 30px;
     font-weight: 100;
     margin-bottom: 40px;
 }
+
+
 .single-wid-product {
     margin-bottom: 31px;
     overflow: hidden;
@@ -392,6 +431,8 @@ body { font-family: 'Titillium Web', sans-serif; }
 .footer-top-area {background: none repeat scroll 0 0 #333;
     color: #999;
     padding: 35px 0 180px;}
+
+
 .footer-bottom-area {background: #000;color: #fff}
 .footer-about-us span {
     color: #1abc9c;
@@ -401,6 +442,7 @@ body { font-family: 'Titillium Web', sans-serif; }
     font-size: 30px;
     font-weight: 100;color: #fff
 }
+
 .footer-about-us h2 {
     font-weight: 200;
 }
@@ -417,6 +459,8 @@ body { font-family: 'Titillium Web', sans-serif; }
     display: block;
     padding: 5px 0;color: #999
 }
+
+
 .footer-social a {
     background: none repeat scroll 0 0 #1abc9c;
     color: #fff;
@@ -429,8 +473,12 @@ body { font-family: 'Titillium Web', sans-serif; }
     text-align: center;
     width: 40px;border: 1px solid #1abc9c;
 }
+
 .footer-social a:hover {background-color: #222;border-color: #666}
+
 .footer-social {margin-top: 20px}
+
+
 .newsletter-form input[type="email"] {
     background: none repeat scroll 0 0 #fff;
     border: medium none;
@@ -458,6 +506,8 @@ a:hover, a:focus {color: #17a78b}
     color: #fff;
     padding-bottom: 40px;
 }
+
+
 .slide-bulletz {
     bottom: 30px;
     left: 0;
@@ -490,6 +540,8 @@ ol.slide-indicators li.active {
     margin: 0 0 0 5px;
     width: 10px;
 }
+
+
 .carousel.carousel-fade .item { transition: opacity 1s ease-in-out }
 .carousel.carousel-fade .active.left,
 .carousel.carousel-fade .active.right {
@@ -498,14 +550,18 @@ ol.slide-indicators li.active {
     opacity: 0;
     filter: alpha(opacity=0);
 }
+
 .footer-card-icon {
     font-size: 30px;
     text-align: right;
 }
+
 .copyright > p {
     margin: 10px 0 0;
 }
+
 .product-big-title-area {background: url(img/crossword.png) repeat scroll 0 0 #1ABC9C}
+
 .product-bit-title h2 {
     font-family: raleway;
     font-size: 50px;
@@ -513,10 +569,17 @@ ol.slide-indicators li.active {
     margin: 0;
     padding: 50px 0;color: #fff;
 }
+
 .single-product-area .zigzag-bottom {background-color: #333333}
+
 .single-product-area {
     padding: 80px 0 130px;
 }
+
+
+
+
+
 .sidebar-title {
     color: #3dc6ab;
     font-size: 25px;
@@ -691,9 +754,11 @@ form.cart {
 .rating-wrap-post {
     font-size: 20px;
 }
+
 .submit-review textarea {
     height: 105px;
 }
+
 .related-products-wrapper {
     margin-top: 30px;
 }
@@ -701,11 +766,15 @@ form.cart {
     font-size: 25px;
     margin-bottom: 30px;
     text-transform: uppercase;}
+
 .related-products-wrapper .owl-nav {
     position: absolute;
     right: 0;
     top: -56px;
 }
+
+
+
 table.shop_table {
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -816,6 +885,9 @@ div.cart-collaterals ul.products li.product .price ins {
     margin-left: 10px;
     text-decoration: none;
 }
+
+
+
 .woocommerce-info {
     background: none repeat scroll 0 0 #f4f4f4;
     font-size: 18px;
@@ -866,28 +938,39 @@ a.about_paypal {
     font-size: 12px;
     margin-left: 15px;
 }
+
+
 #customer_details select, .shipping_calculator select {
     border: 1px solid #ddd;
     margin-bottom: 15px;
     padding: 10px;
     width: 100%;
 }
+
+
 table.shop_table td.product-remove a {
     display: inline-block;
     padding: 0 5px 2px;
     text-transform: uppercase;
 }
+
+
 table.shop_table td.product-remove a:hover {color: #fff;background: red;text-decoration: none}
 table.shop_table td.product-name a{color: #222;}
 table.shop_table td.product-name a:hover {color: #1ABC9C;text-decoration: none}
 div.quantity input.plus:hover, div.quantity input.minus:hover {background-color: #222}
 div.cart-collaterals ul.products li.product a:hover h3 {color: #1ABC9C}
 div.cart-collaterals ul.products li.product a:hover {text-decoration: none}
+
 div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background-color: #222}
+
+
 .cart-collaterals .shipping_calculator {
     float: right;
     width: 40%;
 }
+
+
 #login-form-wrap, #coupon-collapse-wrap {
     background: none repeat scroll 0 0 #f4f4f4;
     margin-bottom: 30px;
@@ -904,6 +987,9 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 #login-form-wrap input[type="submit"] {
     margin-bottom: 15px;
 }
+
+
+
 .single-shop-product h2 {
     font-size: 20px;
     margin: 10px 0;
@@ -911,10 +997,13 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .product-option-shop {
     margin-top: 15px;
 }
+
 .single-shop-product {margin-bottom: 50px}
+
 .pagination > li > a, .pagination > li > span {
     color: #1abc9c;
 }
+
 /*Menu dropdown*/
 nav ul li a {
     display: block;
@@ -925,30 +1014,37 @@ nav ul li a {
     border-bottom: 2px solid transparent;
     transition: all .3s ease-in-out;
 }
+
 nav ul li a:hover,
 nav ul li a:focus {
     background: rgba(0, 0, 0, .15);
 }
+
 nav ul li a:focus {
     color: white;
 }
+
 nav ul li a:not(:only-child)::after {
     padding-left: 4px;
     content: ' ▾';
 }
+
 nav ul li ul li {
     min-width: 190px;
 }
+
 nav ul li ul li a {
     background: transparent;
     color: #555;
     border-bottom: 1px solid #DDE0E7;
 }
+
 nav ul li ul li a:hover,
 nav ul li ul li a:focus {
     background: #eee;
     color: #111;
 }
+
 .dropdown {
     display: none;
     position: absolute;
@@ -957,6 +1053,7 @@ nav ul li ul li a:focus {
     list-style: none;
     z-index: 99;
 }
+
 .dropdown2 {
     display: none;
     position: absolute;

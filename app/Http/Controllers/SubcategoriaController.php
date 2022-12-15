@@ -46,7 +46,7 @@ class SubcategoriaController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Subcategoria  $subcategoria
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @return \Illuminate\Http\Response
      */
     public function show(Subcategoria $subcategoria)
     {
@@ -57,10 +57,11 @@ class SubcategoriaController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Subcategoria  $subcategoria
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @return \Illuminate\Http\Response
      */
     public function edit(Subcategoria $subcategoria)
-    {    $categorias = Categoria::all();
+    {
+        $categorias = Categoria::all();
         return view('admin.subcategorias.edit', compact('subcategoria', 'categorias'));
     }
 
@@ -73,7 +74,7 @@ class SubcategoriaController extends Controller
      */
     public function update(Request $request, Subcategoria $subcategoria)
     {
-        $params = $request->all();;
+        $params = $request->all();
         $subcategoria->update($params);
         return redirect()->route('subcategorias.index');
     }
@@ -82,7 +83,7 @@ class SubcategoriaController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Subcategoria  $subcategoria
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function destroy(Subcategoria $subcategoria)
     {

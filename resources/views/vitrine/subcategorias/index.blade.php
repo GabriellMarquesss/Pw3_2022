@@ -5,9 +5,7 @@
 @endsection
 
 @section('products')
-
     @foreach($verSubCategoria->produtos as $produto)
-
         <div class="col-md-3 col-sm-6">
             <div class="single-shop-product">
                 <div class="product-upper">
@@ -19,9 +17,11 @@
                 </div>
 
                 <div class="product-option-shop">
-                    <a class="add_to_cart_button"  rel="nofollow" href="{{route('vitrine.detalhes', $produto->id)}}">Detalhes</a>
+                    <a class="add_to_cart_button" rel="nofollow" href="{{route('vitrine.detalhes', $produto->id)}}">Detalhes</a>
                 </div>
             </div>
         </div>
     @endforeach
+
+
 @endsection
