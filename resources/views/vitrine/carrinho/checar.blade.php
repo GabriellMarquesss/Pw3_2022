@@ -1,7 +1,7 @@
 @extends('vitrine.cart')
 
 @section('title')
-    <h2>Carrinho de Compras</h2>
+    <h2> Revise o seu pedido </h2>
 @endsection
 
 @section('cart-itens')
@@ -21,8 +21,7 @@
                     <th>Imagem</th>
                     <th class="column-name-cart">Nome</th>
                     <th>Valor</th>
-                    <th>Quantidade</th>
-                    <th>-</th>
+                    <th class="text-center" Quantidade th>
                 </tr>
                 </thead>
                 <tbody class="table-body-cart">
@@ -31,28 +30,13 @@
                         <td><img src="{{\Illuminate\Support\Facades\Storage::url('produtos/'.$item->attributes->image)}}" alt="" class="item-image-cart"></td>
                         <td>{{$item->name}}</td>
                         <td>{{$item->price}}</td>
-                        <form action="{{route('vitrine.updcarrinho')}}" method="post">
-                            <td><input type="number" name="quantity" id="" value="{{$item->quantity}}" class="item-quantity-cart"></td>
-                            <td>
-
-                                @csrf
-                                @method('PUT')
-                                <input type="hidden" name="id" value="{{$item->id}}">
-                                <button class="add_to_cart_button" type="submit">Alterar</button>
-                        </form>
-                        <form action="{{route('vitrine.delcarrinho')}}" method="post" style="display: inline">
-                            @csrf
-                            @method('DELETE')
-                            <input type="hidden" name="id" value="{{$item->id}}">
-                            <button class="add_to_cart_button" type="submit">Excluir</button>
-                        </form>
-                        </td>
+                        <td class="text-center"> {{$item->quantity}} </td>
                     </tr>
                 @endforeach
                 </tbody>
                 <tfoot class="table-foot-cart">
                 <tr>
-                    <td colspan="5">TOTAL: {{\Cart::getTotal()}}</td>
+                    <td colspan="4">TOTAL: {{\Cart::getTotal()}}</td>
                 </tr>
                 </tfoot>
             </table>
@@ -61,10 +45,9 @@
                     <a href="{{route('vitrine.index')}}" class="btn btn-primary">Continuar comprando</a>
                 </div>
                 <div class="col-md-4 text-center">
-                    <a href="{{route('vitrine.clearcarrinho')}}" class="btn btn-danger">Limpar carrinho</a>
                 </div>
                 <div class="col-md-4 text-center">
-                    <a href="{{route('pedido.checar')}}" class="btn btn-success">Finalizar compra</a>
+                    <a href="{{route('pedido.finalizar')}}" class="btn btn-success">Finalizar compra</a>
                 </div>
             </div>
         @endif

@@ -7,7 +7,8 @@
     <title>eElectronics - HTML eCommerce Template</title>
 
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+          type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
@@ -39,7 +40,7 @@
                     <ul>
                         <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
                         <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                        <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
+                        <li><a href="{{route('vitrine.carrinho')}}"><i class="fa fa-user"></i> My Cart</a></li>
                         <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
                         <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
                     </ul>
@@ -50,7 +51,9 @@
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span
+                                    class="key">currency :</span><span class="value">USD </span><b
+                                    class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">USD</a></li>
                                 <li><a href="#">INR</a></li>
@@ -59,7 +62,9 @@
                         </li>
 
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span
+                                    class="key">language :</span><span class="value">English </span><b
+                                    class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">English</a></li>
                                 <li><a href="#">French</a></li>
@@ -84,7 +89,8 @@
 
             <div class="col-sm-6">
                 <div class="shopping-item">
-                    <a href="cart.html">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="{{route('vitrine.carrinho')}}">Cart - <span class="cart-amunt">$800</span> <i
+                            class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                 </div>
             </div>
         </div>
@@ -109,7 +115,9 @@
                         <li class="drop"><a href="shop.html">Categorias</a>
                             <ul class="dropdown">
                                 @foreach($categorias as $categoria)
-                                    <li><a href="{{route('vitrine.categoria', $categoria->id)}}">{{$categoria->nome}}</a></li>
+                                    <li>
+                                        <a href="{{route('vitrine.categoria', $categoria->id)}}">{{$categoria->nome}}</a>
+                                    </li>
                                 @endforeach
 
                             </ul>
@@ -117,7 +125,9 @@
                         <li class="drop2"><a href="single-product.html">Subcategorias</a>
                             <ul class="dropdown2">
                                 @foreach($subcategorias as $subcategoria)
-                                    <li><a href="{{route('vitrine.subcategoria', $subcategoria->id)}}">{{$subcategoria->nome}}</a></li>
+                                    <li>
+                                        <a href="{{route('vitrine.subcategoria', $subcategoria->id)}}">{{$subcategoria->nome}}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </li>
@@ -159,7 +169,10 @@
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
                     <h2>e<span>Electronics</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam
+                        laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure
+                        eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis
+                        magni at?</p>
                     <div class="footer-social">
                         <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                         <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -199,7 +212,8 @@
             <div class="col-md-3 col-sm-6">
                 <div class="footer-newsletter">
                     <h2 class="footer-wid-title">Newsletter</h2>
-                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your
+                        inbox!</p>
                     <div class="newsletter-form">
                         <input type="email" placeholder="Type your email">
                         <input type="submit" value="Subscribe">
@@ -214,7 +228,8 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright">
-                    <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
+                    <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a
+                            href="http://wpexpand.com" target="_blank">WP Expand</a></p>
                 </div>
             </div>
 
@@ -247,4 +262,3 @@
 <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>
-

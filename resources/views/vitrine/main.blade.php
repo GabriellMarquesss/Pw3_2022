@@ -7,7 +7,8 @@
     <title>eElectronics - HTML eCommerce Template</title>
 
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+          type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
@@ -39,7 +40,7 @@
                     <ul>
                         <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
                         <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                        <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
+                        <li><a href="{{route('vitrine.carrinho')}}"><i class="fa fa-user"></i> My Cart</a></li>
                         <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
                         <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
                     </ul>
@@ -50,7 +51,9 @@
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span
+                                    class="key">currency :</span><span class="value">USD </span><b
+                                    class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">USD</a></li>
                                 <li><a href="#">INR</a></li>
@@ -59,7 +62,9 @@
                         </li>
 
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span
+                                    class="key">language :</span><span class="value">English </span><b
+                                    class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">English</a></li>
                                 <li><a href="#">French</a></li>
@@ -84,7 +89,8 @@
 
             <div class="col-sm-6">
                 <div class="shopping-item">
-                    <a href="cart.html">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="{{route('vitrine.carrinho')}}">Cart - <span class="cart-amunt">$800</span> <i
+                            class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                 </div>
             </div>
         </div>
@@ -109,7 +115,9 @@
                         <li class="drop"><a href="shop.html">Categorias</a>
                             <ul class="dropdown">
                                 @foreach($categorias as $categoria)
-                                    <li><a href="{{route('vitrine.categoria', $categoria->id)}}">{{$categoria->nome}}</a></li>
+                                    <li>
+                                        <a href="{{route('vitrine.categoria', $categoria->id)}}">{{$categoria->nome}}</a>
+                                    </li>
                                 @endforeach
 
                             </ul>
@@ -121,7 +129,7 @@
                                 @endforeach
                             </ul>
                         </li>
-                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="{{route('vitrine.carrinho')}}">Cart</a></li>
                     </ul>
                 </nav>
             </div>
@@ -158,8 +166,12 @@
                                     <div class="col-md-6 col-md-offset-6">
                                         <div class="slide-content">
                                             <h2>We are awesome</h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, dolorem, excepturi. Dolore aliquam quibusdam ut quae iure vero exercitationem ratione!</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab molestiae minus reiciendis! Pariatur ab rerum, sapiente ex nostrum laudantium.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur,
+                                                dolorem, excepturi. Dolore aliquam quibusdam ut quae iure vero
+                                                exercitationem ratione!</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab
+                                                molestiae minus reiciendis! Pariatur ab rerum, sapiente ex nostrum
+                                                laudantium.</p>
                                             <a href="" class="readmore">Learn more</a>
                                         </div>
                                     </div>
@@ -179,7 +191,10 @@
                                     <div class="col-md-6 col-md-offset-6">
                                         <div class="slide-content">
                                             <h2>We are great</h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, dolorum harum molestias tempora deserunt voluptas possimus quos eveniet, vitae voluptatem accusantium atque deleniti inventore. Enim quam placeat expedita! Quibusdam!</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+                                                aspernatur, dolorum harum molestias tempora deserunt voluptas possimus
+                                                quos eveniet, vitae voluptatem accusantium atque deleniti inventore.
+                                                Enim quam placeat expedita! Quibusdam!</p>
                                             <a href="" class="readmore">Learn more</a>
                                         </div>
                                     </div>
@@ -199,8 +214,12 @@
                                     <div class="col-md-6 col-md-offset-6">
                                         <div class="slide-content">
                                             <h2>We are superb</h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eius?</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptates necessitatibus dicta recusandae quae amet nobis sapiente explicabo voluptatibus rerum nihil quas saepe, tempore error odio quam obcaecati suscipit sequi.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+                                                eius?</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+                                                voluptates necessitatibus dicta recusandae quae amet nobis sapiente
+                                                explicabo voluptatibus rerum nihil quas saepe, tempore error odio quam
+                                                obcaecati suscipit sequi.</p>
                                             <a href="" class="readmore">Learn more</a>
                                         </div>
                                     </div>
@@ -260,14 +279,16 @@
                                 <img src="img/product-1.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
+                                        See details</a>
                                 </div>
                             </div>
 
                             <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
 
                             <div class="product-carousel-price">
-                                <ins>$700.00</ins> <del>$800.00</del>
+                                <ins>$700.00</ins>
+                                <del>$800.00</del>
                             </div>
                         </div>
                         <div class="single-product">
@@ -275,13 +296,15 @@
                                 <img src="img/product-2.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
+                                        See details</a>
                                 </div>
                             </div>
 
                             <h2><a href="single-product.html">Apple new mac book 2015 March :P</a></h2>
                             <div class="product-carousel-price">
-                                <ins>$899.00</ins> <del>$999.00</del>
+                                <ins>$899.00</ins>
+                                <del>$999.00</del>
                             </div>
                         </div>
                         <div class="single-product">
@@ -289,14 +312,16 @@
                                 <img src="img/product-3.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
+                                        See details</a>
                                 </div>
                             </div>
 
                             <h2><a href="single-product.html">Apple new i phone 6</a></h2>
 
                             <div class="product-carousel-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
+                                <ins>$400.00</ins>
+                                <del>$425.00</del>
                             </div>
                         </div>
                         <div class="single-product">
@@ -304,14 +329,16 @@
                                 <img src="img/product-4.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
+                                        See details</a>
                                 </div>
                             </div>
 
                             <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
 
                             <div class="product-carousel-price">
-                                <ins>$200.00</ins> <del>$225.00</del>
+                                <ins>$200.00</ins>
+                                <del>$225.00</del>
                             </div>
                         </div>
                         <div class="single-product">
@@ -319,14 +346,16 @@
                                 <img src="img/product-5.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
+                                        See details</a>
                                 </div>
                             </div>
 
                             <h2><a href="single-product.html">Sony Smart Air Condtion</a></h2>
 
                             <div class="product-carousel-price">
-                                <ins>$1200.00</ins> <del>$1355.00</del>
+                                <ins>$1200.00</ins>
+                                <del>$1355.00</del>
                             </div>
                         </div>
                         <div class="single-product">
@@ -334,7 +363,8 @@
                                 <img src="img/product-6.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
+                                        See details</a>
                                 </div>
                             </div>
 
@@ -383,7 +413,8 @@
                     <h2 class="product-wid-title">Top Sellers</h2>
                     <a href="" class="wid-view-more">View All</a>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-1.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -393,11 +424,13 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-2.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Apple new mac book 2015</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -407,11 +440,13 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-3.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Apple new i phone 6</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -421,7 +456,8 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                 </div>
@@ -431,7 +467,8 @@
                     <h2 class="product-wid-title">Recently Viewed</h2>
                     <a href="#" class="wid-view-more">View All</a>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-4.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -441,11 +478,13 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-1.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Sony Smart Air Condtion</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -455,11 +494,13 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-2.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -469,7 +510,8 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                 </div>
@@ -479,7 +521,8 @@
                     <h2 class="product-wid-title">Top New</h2>
                     <a href="#" class="wid-view-more">View All</a>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-3.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Apple new i phone 6</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -489,11 +532,13 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-4.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -503,11 +548,13 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                        <a href="single-product.html"><img src="img/product-thumb-1.jpg" alt=""
+                                                           class="product-thumb"></a>
                         <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
@@ -517,7 +564,8 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$400.00</ins>
+                            <del>$425.00</del>
                         </div>
                     </div>
                 </div>
@@ -533,7 +581,10 @@
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
                     <h2>e<span>Electronics</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam
+                        laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure
+                        eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis
+                        magni at?</p>
                     <div class="footer-social">
                         <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                         <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -573,7 +624,8 @@
             <div class="col-md-3 col-sm-6">
                 <div class="footer-newsletter">
                     <h2 class="footer-wid-title">Newsletter</h2>
-                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your
+                        inbox!</p>
                     <div class="newsletter-form">
                         <form action="#">
                             <input type="email" placeholder="Type your email">
@@ -591,7 +643,8 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright">
-                    <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
+                    <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a
+                            href="http://wpexpand.com" target="_blank">WP Expand</a></p>
                 </div>
             </div>
 

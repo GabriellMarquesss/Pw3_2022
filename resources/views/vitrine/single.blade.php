@@ -7,7 +7,8 @@
     <title>eElectronics - HTML eCommerce Template</title>
 
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+          type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
@@ -39,7 +40,7 @@
                     <ul>
                         <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
                         <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                        <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
+                        <li><a href="{{route('vitrine.carrinho')}}"><i class="fa fa-user"></i> My Cart</a></li>
                         <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
                         <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
                     </ul>
@@ -50,7 +51,9 @@
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span
+                                    class="key">currency :</span><span class="value">USD </span><b
+                                    class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">USD</a></li>
                                 <li><a href="#">INR</a></li>
@@ -59,7 +62,9 @@
                         </li>
 
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span
+                                    class="key">language :</span><span class="value">English </span><b
+                                    class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">English</a></li>
                                 <li><a href="#">French</a></li>
@@ -84,7 +89,8 @@
 
             <div class="col-sm-6">
                 <div class="shopping-item">
-                    <a href="cart.html">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="{{route('vitrine.carrinho')}}">Cart - <span class="cart-amunt">$800</span> <i
+                            class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                 </div>
             </div>
         </div>
@@ -109,7 +115,9 @@
                         <li class="drop"><a href="shop.html">Categorias</a>
                             <ul class="dropdown">
                                 @foreach($categorias as $categoria)
-                                    <li><a href="{{route('vitrine.categoria', $categoria->id)}}">{{$categoria->nome}}</a></li>
+                                    <li>
+                                        <a href="{{route('vitrine.categoria', $categoria->id)}}">{{$categoria->nome}}</a>
+                                    </li>
                                 @endforeach
 
                             </ul>
@@ -117,7 +125,9 @@
                         <li class="drop2"><a href="single-product.html">Subcategorias</a>
                             <ul class="dropdown2">
                                 @foreach($subcategorias as $subcategoria)
-                                    <li><a href="{{route('vitrine.subcategoria', $subcategoria->id)}}">{{$subcategoria->nome}}</a></li>
+                                    <li>
+                                        <a href="{{route('vitrine.subcategoria', $subcategoria->id)}}">{{$subcategoria->nome}}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </li>
@@ -147,6 +157,7 @@
     <div class="container">
         <div class="row">
             {{--<div class="col-md-4">
+
             </div>--}}
 
             <div class="col-md-12">
@@ -181,12 +192,15 @@
 
 
                                 <div class="product-inner-category">
-                                    <p>Category: <a href="">Summer</a>. Tags: <a href="">awesome</a>, <a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
+                                    <p>Category: <a href="">Summer</a>. Tags: <a href="">awesome</a>, <a
+                                            href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
                                 </div>
 
                                 <div role="tabpanel">
                                     <ul class="product-tab" role="tablist">
-                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home"
+                                                                                  role="tab" data-toggle="tab">Description</a>
+                                        </li>
 
                                     </ul>
                                     <div class="tab-content">
@@ -210,7 +224,8 @@
                                 <div class="product-f-image">
                                     <img src="img/product-1.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
+                                            cart</a>
                                         <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -218,28 +233,32 @@
                                 <h2><a href="">Sony Smart TV - 2015</a></h2>
 
                                 <div class="product-carousel-price">
-                                    <ins>$700.00</ins> <del>$800.00</del>
+                                    <ins>$700.00</ins>
+                                    <del>$800.00</del>
                                 </div>
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/product-2.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
+                                            cart</a>
                                         <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
 
                                 <h2><a href="">Apple new mac book 2015 March :P</a></h2>
                                 <div class="product-carousel-price">
-                                    <ins>$899.00</ins> <del>$999.00</del>
+                                    <ins>$899.00</ins>
+                                    <del>$999.00</del>
                                 </div>
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/product-3.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
+                                            cart</a>
                                         <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -247,14 +266,16 @@
                                 <h2><a href="">Apple new i phone 6</a></h2>
 
                                 <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
+                                    <ins>$400.00</ins>
+                                    <del>$425.00</del>
                                 </div>
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/product-4.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
+                                            cart</a>
                                         <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -262,14 +283,16 @@
                                 <h2><a href="">Sony playstation microsoft</a></h2>
 
                                 <div class="product-carousel-price">
-                                    <ins>$200.00</ins> <del>$225.00</del>
+                                    <ins>$200.00</ins>
+                                    <del>$225.00</del>
                                 </div>
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/product-5.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
+                                            cart</a>
                                         <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -277,14 +300,16 @@
                                 <h2><a href="">Sony Smart Air Condtion</a></h2>
 
                                 <div class="product-carousel-price">
-                                    <ins>$1200.00</ins> <del>$1355.00</del>
+                                    <ins>$1200.00</ins>
+                                    <del>$1355.00</del>
                                 </div>
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="img/product-6.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
+                                            cart</a>
                                         <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -311,7 +336,10 @@
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
                     <h2>e<span>Electronics</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam
+                        laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure
+                        eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis
+                        magni at?</p>
                     <div class="footer-social">
                         <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                         <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -351,7 +379,8 @@
             <div class="col-md-3 col-sm-6">
                 <div class="footer-newsletter">
                     <h2 class="footer-wid-title">Newsletter</h2>
-                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your
+                        inbox!</p>
                     <div class="newsletter-form">
                         <input type="email" placeholder="Type your email">
                         <input type="submit" value="Subscribe">
@@ -366,7 +395,8 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright">
-                    <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
+                    <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a
+                            href="http://wpexpand.com" target="_blank">WP Expand</a></p>
                 </div>
             </div>
 
